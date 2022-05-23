@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link/> Should match snapshot 1`] = `
+<a
+  href="https://www.google.com"
+  target="_blank"
+>
+  <div
+    style="margin-right: 8px;"
+  >
+    Learn more
+     
+  </div>
+  <svg
+    fill="currentColor"
+    height="1em"
+    width="1em"
+  >
+    right.svg
+  </svg>
+</a>
+`;

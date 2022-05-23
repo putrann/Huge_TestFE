@@ -1,0 +1,94 @@
+{
+  "name": "react-typescript-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "author": "",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.1.1",
+    "tailwindcss": "^1.6.2",
+    "tailwindcss-transform": "^0.1.0",
+    "tailwindcss-transitions": "^2.2.0",
+    "use-media": "^1.4.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "build:analyze": "react-app-rewired build && webpack-bundle-analyzer --port 4200 build/stats.json",
+    "test": "react-app-rewired test",
+    "test:ci": "react-app-rewired test test --env=jsdom --coverage --watchAll=false --maxWorkers=2",
+    "test:coverage": "react-app-rewired test --coverage --watchAll=false",
+    "serve": "serve -s build",
+    "prettify": "prettier -c --write \"*/**\"",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@testing-library/react": "^10.4.8",
+    "@types/jest": "26.0.10",
+    "@types/node": "14.0.27",
+    "@types/react": "16.9.46",
+    "@types/react-dom": "16.9.8",
+    "@types/styled-components": "^5.1.2",
+    "@zlph/eslint-config-react-app": "^0.0.3",
+    "babel-plugin-styled-components": "^1.11.1",
+    "customize-cra": "^1.0.0",
+    "husky": "^4.2.5",
+    "jest-styled-components": "^7.0.2",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "react-app-rewired": "^2.1.6",
+    "twin.macro": "^1.7.0",
+    "typescript": "3.9.7",
+    "webpack-bundle-analyzer": "^3.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "src/tailwind.config.js",
+      "preset": "styled-components",
+      "autoCssProp": true,
+      "debugProp": true,
+      "debugPlugins": false,
+      "debug": false
+    }
+  }
+}
