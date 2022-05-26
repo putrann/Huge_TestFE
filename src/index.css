@@ -3,3 +3,14 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.slick-dots li {
+  width: auto !important;
+  height: 134px !important;
+}
+
+.slick-dots {
+  display: flex !important;
+  flex-direction: column;
+  bottom: 580px !important;
+}
