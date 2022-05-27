@@ -4,9 +4,12 @@
   "private": true,
   "author": "",
   "dependencies": {
+    "@types/react-slick": "^0.23.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.1",
     "tailwindcss": "^1.6.2",
     "tailwindcss-transform": "^0.1.0",

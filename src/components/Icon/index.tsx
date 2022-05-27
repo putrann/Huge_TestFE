@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { IconType } from './type';
+import * as React from "react";
+import { IconType } from "./type";
 
-import { ReactComponent as Go } from '../../svg/icons/go.svg';
-import { ReactComponent as Search } from '../../svg/icons/search.svg';
-import { ReactComponent as Right } from '../../svg/icons/right.svg';
-import { ReactComponent as Logo } from '../../svg/Logo.svg';
-import { ReactComponent as Menu } from '../../svg/icons/menu.svg';
+import { ReactComponent as Go } from "assets/svg/icons/go.svg";
+import { ReactComponent as Search } from "assets/svg/icons/search.svg";
+import { ReactComponent as Right } from "assets/svg/icons/right.svg";
+import { ReactComponent as Logo } from "assets/svg/logo.svg";
+import { ReactComponent as Menu } from "assets/svg/icons/menu.svg";
 
 const icons: {
   [k in IconType]: any;
@@ -28,7 +28,7 @@ export function Icon({ type, ...rest }: IconProps) {
   if (!Component) {
     // eslint-disable-next-line
     console.error(
-      `The icon with type:${type} doesn't exist. Make sure you pass the existing one.`,
+      `The icon with type:${type} doesn't exist. Make sure you pass the existing one.`
     );
 
     return null;
