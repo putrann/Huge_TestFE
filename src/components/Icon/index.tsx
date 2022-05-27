@@ -1,6 +1,5 @@
 import * as React from "react";
 import { IconType } from "./type";
-
 import { ReactComponent as Go } from "assets/svg/icons/go.svg";
 import { ReactComponent as Search } from "assets/svg/icons/search.svg";
 import { ReactComponent as Right } from "assets/svg/icons/right.svg";
