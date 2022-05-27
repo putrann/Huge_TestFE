@@ -5,6 +5,7 @@
   "author": "",
   "dependencies": {
     "@types/react-slick": "^0.23.8",
+    "gsap": "^3.10.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
