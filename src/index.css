@@ -7,10 +7,13 @@
 .slick-dots li {
   width: auto !important;
   height: 134px !important;
+  margin: 15px !important;
+  left: -150px;
 }
 
 .slick-dots {
   display: flex !important;
   flex-direction: column;
-  bottom: 580px !important;
+  bottom: 601px !important;
+  width: 75% !important;
 }

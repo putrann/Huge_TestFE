@@ -9,7 +9,21 @@ export const Wrapper = styled.div`
   @media only screen and (min-width: 768px) {
     padding: 169px 0 48px;
     display: flex;
-    justify-content: center;
+  }
+  @media only screen and (min-width: 1024px) {
+    margin-left: 250px;
+  }
+  @media only screen and (min-width: 1280px) {
+    margin-left: 400px;
+  }
+  @media only screen and (min-width: 1440px) {
+    margin-left: 600px;
+  }
+  @media only screen and (min-width: 1920px) {
+    margin-left: 800px;
+  }
+  @media only screen and (min-width: 2300px) {
+    margin-left: 1000px;
   }
 
   .wrap-number {
@@ -33,6 +47,7 @@ export const Wrapper = styled.div`
     }
     &.click {
       color: #00a4b8;
+      opacity: 1;
     }
     @media only screen and (min-width: 768px) {
       margin-right: 48px;
@@ -129,10 +144,5 @@ export const Wrapper = styled.div`
       line-height: 24px;
       margin-top: 40px;
     }
-  }
-
-  &.slick-dots li {
-    width: 60px;
-    height: 45px;
   }
 `;

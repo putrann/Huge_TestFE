@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Wrapper } from "./style";
 import Map from "assets/img/map.jpg";
 import Link from "components/Link";
@@ -11,10 +11,12 @@ export default function Carousel() {
       return (
         <Wrapper>
           <div className="wrap-number">
-            <div className="number">{"01"}</div>
-            {/* <div className="number">02</div>
-            <div className="number">03</div>
-            <div className="number">04</div> */}
+            <div
+              className="number click"
+              onClick={() => {
+                console.log(`0${i + 1}`);
+              }}
+            >{`0${i + 1}`}</div>
           </div>
         </Wrapper>
       );
@@ -27,77 +29,36 @@ export default function Carousel() {
     slidesToScroll: 1,
   };
 
+  //beacause same data
+  const renderNewData = () => {
+    return (
+      <Wrapper>
+        <div className="wrap-content">
+          <div className="msg-01">{mgsConfig.OUR_FEATURED_FUNDS}</div>
+          <div className="msg-02">{mgsConfig.DISRUPTIVE}</div>
+          <img alt="" className="map-img" src={Map} />
+
+          {msgDetail.map((item) => (
+            <div className="wrap-detail">
+              <div className="msg-left-detail"> {item.msg}</div>
+              <div className="msg-left-detail msg-right-detail">
+                {item.price}
+              </div>
+            </div>
+          ))}
+          <Link className="more-detail" msg={mgsConfig.EXPLORE} />
+        </div>
+      </Wrapper>
+    );
+  };
+
   return (
     <div>
       <Slider {...settings}>
-        <Wrapper>
-          <div className="wrap-content">
-            <div className="msg-01">{mgsConfig.OUR_FEATURED_FUNDS}</div>
-            <div className="msg-02">{mgsConfig.DISRUPTIVE}</div>
-            <img alt="" className="map-img" src={Map} />
-
-            {msgDetail.map((item) => (
-              <div className="wrap-detail">
-                <div className="msg-left-detail"> {item.msg}</div>
-                <div className="msg-left-detail msg-right-detail">
-                  {item.price}
-                </div>
-              </div>
-            ))}
-            <Link className="more-detail" msg={mgsConfig.EXPLORE} />
-          </div>
-        </Wrapper>
-        <Wrapper>
-          <div className="wrap-content">
-            <div className="msg-01">{mgsConfig.OUR_FEATURED_FUNDS}</div>
-            <div className="msg-02">{mgsConfig.DISRUPTIVE}</div>
-            <img alt="" className="map-img" src={Map} />
-
-            {msgDetail.map((item) => (
-              <div className="wrap-detail">
-                <div className="msg-left-detail"> {item.msg}</div>
-                <div className="msg-left-detail msg-right-detail">
-                  {item.price}
-                </div>
-              </div>
-            ))}
-            <Link className="more-detail" msg="Explore more funds" />
-          </div>
-        </Wrapper>
-        <Wrapper>
-          <div className="wrap-content">
-            <div className="msg-01">{mgsConfig.OUR_FEATURED_FUNDS}</div>
-            <div className="msg-02">{mgsConfig.DISRUPTIVE}</div>
-            <img alt="" className="map-img" src={Map} />
-
-            {msgDetail.map((item) => (
-              <div className="wrap-detail">
-                <div className="msg-left-detail"> {item.msg}</div>
-                <div className="msg-left-detail msg-right-detail">
-                  {item.price}
-                </div>
-              </div>
-            ))}
-            <Link className="more-detail" msg="Explore more funds" />
-          </div>
-        </Wrapper>
-        <Wrapper>
-          <div className="wrap-content">
-            <div className="msg-01">{mgsConfig.OUR_FEATURED_FUNDS}</div>
-            <div className="msg-02">{mgsConfig.DISRUPTIVE}</div>
-            <img alt="" className="map-img" src={Map} />
-
-            {msgDetail.map((item) => (
-              <div className="wrap-detail">
-                <div className="msg-left-detail"> {item.msg}</div>
-                <div className="msg-left-detail msg-right-detail">
-                  {item.price}
-                </div>
-              </div>
-            ))}
-            <Link className="more-detail" msg="Explore more funds" />
-          </div>
-        </Wrapper>
+        {renderNewData()}
+        {renderNewData()}
+        {renderNewData()}
+        {renderNewData()}
       </Slider>
     </div>
   );
